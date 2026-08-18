@@ -17,26 +17,6 @@ npm install
 npm run dev      # http://localhost:3000
 ```
 
-## Cómo subirlo a Vercel
-
-**Opción A — desde el repositorio**
-
-```bash
-git init && git add . && git commit -m "Simulación efecto Doppler"
-git remote add origin <tu-repo>
-git push -u origin main
-```
-
-Después, en vercel.com: *Add New → Project → Import*. Vercel detecta Next.js solo; no hay
-variables de entorno ni configuración adicional.
-
-**Opción B — desde la terminal**
-
-```bash
-npm i -g vercel
-vercel        # preview
-vercel --prod # producción
-```
 
 ## Controles
 
@@ -141,7 +121,7 @@ En cada frame, para cada esfera:
    `lerp` por frame para que la transición sea continua. También existe el modo alternativo
    que mapea el degradado contra la distancia en lugar de la velocidad.
 
-## Cómo presentarlo
+## Presentación
 
 - **Sistema estudiado**: el comportamiento de las ondas —sonoras y lumínicas— emitidas por
   cuerpos en movimiento relativo respecto de un punto de observación.
@@ -165,7 +145,7 @@ acá es la aproximación estándar y es la que corresponde al caso acústico exa
   órbitas. Los puntos se dibujan con un shader propio: cada estrella lleva su tamaño en
   píxeles y su color ya multiplicado por la magnitud, con un 1 % de gigantes muy brillantes
   y una banda de mayor densidad que hace de vía láctea.
-- **Superficie.** El regolito se genera por código en un canvas: maria basálticos, unos 420
+- **Superficie.** La superficie lunar se genera por código en un canvas: maria basálticos, unos 420
   cráteres de radio variable con piso hundido y borde elevado, y grano fino encima. Ese
   canvas se usa a la vez como mapa de color, mapa de relieve y mapa de desplazamiento, así
   que los cráteres deforman la malla de verdad. Un sol rasante alarga las sombras y el
